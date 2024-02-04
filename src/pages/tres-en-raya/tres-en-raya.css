@@ -1,0 +1,49 @@
+.tres-en-raya-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tres-en-raya-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tres-en-raya-board {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.tres-en-raya-cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tres-en-raya-buttons {
+  margin-top: 20px;
+}
+
+.tres-en-raya-buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

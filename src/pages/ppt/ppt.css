@@ -1,0 +1,13 @@
+.ppt-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ppt-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
