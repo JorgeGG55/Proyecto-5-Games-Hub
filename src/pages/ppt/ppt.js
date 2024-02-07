@@ -7,13 +7,23 @@ export default function renderPiedraPapelTijera() {
   container.innerHTML = `
     <h1 class="ppt-title">Piedra, Papel o Tijera</h1>
     <div class="choices">
-      <button onclick="jugar('piedra')">Piedra</button>
-      <button onclick="jugar('papel')">Papel</button>
-      <button onclick="jugar('tijera')">Tijera</button>
+      <button class="choiceButton" onclick="jugar('piedra')">Piedra</button>
+      <button class="choiceButton" onclick="jugar('papel')">Papel</button>
+      <button class="choiceButton" onclick="jugar('tijera')">Tijera</button>
     </div>
     <div class="result">
-      <p>Victorias: <span id="victorias">0</span></p>
-      <p>Derrotas: <span id="derrotas">0</span></p>
+    </div>
+    <div class="score">
+      <div class="scoreNames">
+        <p class="namesText">Tú</p>
+        <p class="namesText">|</p>
+        <p class="namesText">IA</p>
+      </div>
+      <div class="scoreNumbers">
+        <p>0</p>
+        <p>:</p>
+        <p>0</p>
+      </div>
     </div>
   `;
 
@@ -43,8 +53,20 @@ export default function renderPiedraPapelTijera() {
     resultContainer.innerHTML = `
       <p>${resultado}</p>
       <p>La máquina eligió: ${eleccionMaquina}</p>
-      <p>Victorias: <span id="victorias">${victorias}</span></p>
-      <p>Derrotas: <span id="derrotas">${derrotas}</span></p>
+    `;
+
+    const scoreContainer = container.querySelector(".score");
+    scoreContainer.innerHTML = `
+      <div class="scoreNames">
+        <p class="namesText">Tú</p>
+        <p class="namesText">|</p>
+        <p class="namesText">IA</p>
+      </div>
+      <div class="scoreNumbers">
+        <p><span id="victorias">${victorias}</span></p>
+        <p>:</p>
+        <p><span id="derrotas">${derrotas}</span></p>
+      </div>
     `;
 
     localStorage.setItem("victorias", victorias.toString());

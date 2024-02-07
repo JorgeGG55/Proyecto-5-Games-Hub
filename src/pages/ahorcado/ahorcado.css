@@ -1,15 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
 .ahorcado-container {
-  background-color: #fff;
+  display: flex;
+  background-color: #1a2937;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-top: 10%;
+  height: 532px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .ahorcado {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.ahorcado-title {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.palabra {
+  color: white;
 }
 
 .teclado {
@@ -19,16 +37,19 @@
 .mensaje {
   margin: 10px 0;
   font-weight: bold;
+  color: white;
 }
 
 .letras {
   display: flex;
   flex-wrap: wrap;
+  width: 50%;
+  margin-left: 24%;
   justify-content: center;
 }
 
 .letras button {
-  background-color: #4caf50;
+  background-color: #18bc9c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -44,7 +65,6 @@
   color: red;
 }
 
-#boton-reiniciar {
-  margin-left: 40%;
-  margin-top: 20px;
+.intentos-restantes {
+  color: white;
 }

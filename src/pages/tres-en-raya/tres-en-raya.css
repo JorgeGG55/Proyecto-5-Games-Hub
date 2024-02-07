@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
 .tres-en-raya-container {
-  background-color: #fff;
+  background-color: #1a2937;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-top: 10%;
 }
 
 .tres-en-raya-title {
-  color: #333;
-  font-size: 24px;
+  color: white;
+  font-size: 30px;
   margin-bottom: 20px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.rojo {
+  color: #e6004c;
 }
 
 .tres-en-raya-board {
@@ -23,12 +30,19 @@
 .tres-en-raya-cell {
   width: 100px;
   height: 100px;
-  border: 2px solid #333;
+  color: #18bc9c;
+  border: 2px solid #6b7885;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 60px;
+  font-weight: bold;
   cursor: pointer;
+}
+
+#turno {
+  color: white;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .tres-en-raya-buttons {
@@ -36,7 +50,7 @@
 }
 
 .tres-en-raya-buttons button {
-  background-color: #4caf50;
+  background-color: #18bc9c;
   color: white;
   border: none;
   padding: 10px 20px;

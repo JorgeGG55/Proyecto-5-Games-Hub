@@ -73,7 +73,7 @@ export default function renderAhorcado() {
   };
 
   container.innerHTML = `
-    <h1>Ahorcado</h1>
+    <h1 class="ahorcado-title">Ahorcado</h1>
     <div class="ahorcado">
       <div class="imagen" id="imagen-ahorcado"></div>
       <div class="palabra"></div>

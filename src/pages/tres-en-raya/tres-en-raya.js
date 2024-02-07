@@ -45,20 +45,31 @@ window.iniciarJuego = function (jugador) {
   function realizarJugada(row, col) {
     if (estadoJuego[row][col] === null) {
       estadoJuego[row][col] = jugador;
-      casillas[row * 3 + col].textContent = jugador;
+
+      const texto = document.createElement("span");
+      texto.textContent = jugador;
+      if (jugador === "O") {
+        texto.classList.add("rojo");
+      }
+
+      casillas[row * 3 + col].innerHTML = "";
+      casillas[row * 3 + col].appendChild(texto);
+
       const ganador = comprobarGanador();
       const empate = comprobarEmpate();
 
-      if (ganador) {
-        alert(`¡El jugador ${ganador} ha ganado!`);
-        reiniciarJuego();
-      } else if (empate) {
-        alert("¡Empate!");
-        reiniciarJuego();
-      } else {
-        jugador = jugador === "X" ? "O" : "X";
-        turnoP.textContent = `Turno: ${jugador}`;
-      }
+      setTimeout(() => {
+        if (ganador) {
+          alert(`¡El jugador ${ganador} ha ganado!`);
+          reiniciarJuego();
+        } else if (empate) {
+          alert("¡Empate!");
+          reiniciarJuego();
+        } else {
+          jugador = jugador === "X" ? "O" : "X";
+          turnoP.textContent = `Turno: ${jugador}`;
+        }
+      }, 0);
     }
   }
 
